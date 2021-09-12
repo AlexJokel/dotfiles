@@ -29,4 +29,6 @@ let g:airline#extensions#tabline#tabs_label = ''
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 " let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tmuxline#enabled = 0
+let g:tmuxline_theme = 'airline'
+let g:tmuxline_preset = 'minimal'
 
