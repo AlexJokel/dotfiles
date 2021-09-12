@@ -11,6 +11,7 @@ ln -s nvim.appimage nvim
 ln -s nvim vim
 nvim -c "PlugInstall|qa"
 nvim -c "Tmuxline|TmuxlineSnapshot ~/.vim/tmuxline|qa"
+nvim -c "LspInstall cpp" -c "LspInstall python" -c "LspInstall vim" -c "LspInstall lua" -c "LspInstall bash"
 if ! grep -q "PATH=.*\.local/bin" ~/.bashrc; then
     echo -e "export PATH=\"$BIN_PATH:\$PATH\"\n" >> ~/.bashrc
     echo "Restart shell or reload config file to access nvim."
