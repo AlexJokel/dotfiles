@@ -19,3 +19,12 @@ fi
 if ! grep -qxF "export EDITOR=\"nvim\"" ~/.bashrc; then
     echo -e "export EDITOR=\"nvim\"\n" >> ~/.bashrc
 fi
+
+# Other tools
+~/.vim/plugged/fzf/install --key-bindings --completion --update-rc
+sudo apt install -o Dpkg::Options::="--force-overwrite" bat ripgrep
+if ! grep -qxF "export BAT_THEME=\"OneHalfLight\"" ~/.bashrc; then
+    echo -e "export BAT_THEME=\"OneHalfLight\"\n" >> ~/.bashrc
+fi
+cd "$BIN_PATH"
+ln -s /usr/bin/batcat bat
