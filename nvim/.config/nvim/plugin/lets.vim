@@ -9,6 +9,8 @@ let g:incsearch#auto_nohlsearch = 1
 let g:tagbar_autofocus = 1
 let g:tagbar_map_showproto = "f"
 let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:vim_json_conceal = 0
+let g:AutoPairsMultilineClose = 0
 
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1

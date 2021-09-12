@@ -22,6 +22,7 @@ Plug 'mbbill/undotree'
 Plug 'preservim/tagbar'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 " Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
@@ -54,8 +55,8 @@ augroup END
 autocmd User SignifyAutocmds
       \ exe 'au! signify' | au signify BufWritePost * call sy#start()
 
-augroup Markdown
+augroup Text
   autocmd!
-  autocmd FileType markdown set wrap
+  autocmd FileType markdown,gitcommit set wrap
 augroup END
 
