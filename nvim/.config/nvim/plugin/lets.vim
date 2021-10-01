@@ -11,6 +11,9 @@ let g:tagbar_map_showproto = "f"
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:vim_json_conceal = 0
 let g:AutoPairsMultilineClose = 0
+let g:undotree_WindowLayout = 2
+let g:undotree_ShortIndicators = 1
+let g:undotree_SplitWidth = 35
 
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
