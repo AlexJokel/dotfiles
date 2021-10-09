@@ -5,7 +5,6 @@ let mapleader = " "
 vnoremap <silent> <leader>pv  "_dP
 vnoremap <silent> <C-j>       :move '>+1<CR>gv=gv
 vnoremap <silent> <C-k>       :move '<-2<CR>gv=gv
- noremap <silent> p           p'[v']=
  noremap <silent> <leader>sh  :FSHere<CR>
 
 " Window stuff
