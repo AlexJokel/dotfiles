@@ -1,24 +1,17 @@
--- local clangd_config = require"lspinstall/util".extract_config("clangd")
--- clangd_config.default_config.cmd[1] = "./clangd/bin/clangd"
--- clangd_config.default_config.cmd[3] = "--header-insertion=never"
--- require'lspinstall/servers'.cpp = clangd_config
+local lsp_installer = require("nvim-lsp-installer")
 
-local function setup_servers()
-  require'lspinstall'.setup()
-  local servers = require'lspinstall'.installed_servers()
-  for _, server in pairs(servers) do
-    require'lspconfig'[server].setup{}
-  end
-end
+-- Register a handler that will be called for each installed server when it's ready (i.e. when installation is finished
+-- or if the server is already installed).
+lsp_installer.on_server_ready(function(server)
+    local opts = {}
 
-setup_servers()
+    -- (optional) Customize the options passed to the server
+    -- if server.name == "tsserver" then
+    --     opts.root_dir = function() ... end
+    -- end
 
--- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
-require'lspinstall'.post_install_hook = function ()
-  setup_servers() -- reload installed servers
-  vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
-end
-
--- Disable Diagnostcs globally
--- vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
-
+    -- This setup() function will take the provided server configuration and decorate it with the necessary properties
+    -- before passing it onwards to lspconfig.
+    -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+    server:setup(opts)
+end)
