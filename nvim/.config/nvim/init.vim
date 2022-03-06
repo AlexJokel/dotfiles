@@ -23,6 +23,7 @@ Plug 'preservim/tagbar'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 " Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
@@ -60,3 +61,8 @@ augroup Text
   autocmd FileType markdown,gitcommit set wrap
 augroup END
 
+augroup golang
+  autocmd!
+  " Note the escaped space in listchars tab.
+  autocmd FileType go setlocal listchars+=tab:⎸\  tabstop=4 noexpandtab
+augroup END
