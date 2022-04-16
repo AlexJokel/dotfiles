@@ -23,7 +23,7 @@ set undofile
 set undodir=$HOME/.vim/undo
 set hlsearch
 set formatoptions-=t
-set cinoptions+=(s,:0,N-s,m1
+set cinoptions+=(s,:0,l1,N-s,m1,g0
 set listchars+=trail:.
 set list
 
