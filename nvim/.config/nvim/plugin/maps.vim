@@ -67,11 +67,6 @@ vnoremap <silent> <C-k>       :move '<-2<CR>gv=gv
      map <silent> g#          <Plug>(incsearch-nohl-g#)
 
 " LSP config
-inoremap <silent><expr> <C-Space>  compe#complete()
-inoremap <silent><expr> <CR>       compe#confirm('<CR>')
-inoremap <silent><expr> <C-e>      compe#close('<C-e>')
-inoremap <silent><expr> <C-f>      compe#scroll({ 'delta': +4 })
-inoremap <silent><expr> <C-d>      compe#scroll({ 'delta': -4 })
 nnoremap <silent> <leader>ld       <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <leader>lD       <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> <leader>lr       <cmd>lua vim.lsp.buf.references()<CR>
