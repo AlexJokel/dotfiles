@@ -23,6 +23,7 @@ Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
