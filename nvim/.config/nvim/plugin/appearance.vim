@@ -9,7 +9,7 @@ set t_ZH=[3m
 set t_ZR=[23m
 let g:one_allow_italics = 1
 let g:gruvbox_italic = 1
-colorscheme one
+colorscheme one-nvim
 set background=light
 
 let g:airline_powerline_fonts = 1

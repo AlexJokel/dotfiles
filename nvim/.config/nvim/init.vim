@@ -41,7 +41,10 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 " The 'one' theme needs to be before airline.
 Plug 'rakr/vim-one'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'morhetz/gruvbox'
+Plug 'ellisonleao/gruvbox'
+Plug 'Th3Whit3Wolf/one-nvim'
+Plug 'olimorris/onedarkpro.nvim'
+Plug 'EdenEast/nightfox.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
