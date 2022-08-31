@@ -8,10 +8,9 @@ cd "$BIN_PATH"
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 ln -sf nvim.appimage nvim
-ln -sf nvim vim
-nvim -c "PlugInstall|qa"
+./nvim -c "PlugInstall|qa"
 if [[ -n "$TMUX" ]]; then
-    nvim -c "Tmuxline|TmuxlineSnapshot ~/.vim/tmuxline|qa"
+    ./nvim -c "Tmuxline|TmuxlineSnapshot ~/.vim/tmuxline|qa"
 fi
 if ! grep -q "PATH=.*\.local/bin" ~/.bashrc; then
     echo -e "export PATH=\"$BIN_PATH:\$PATH\"\n" >> ~/.bashrc
