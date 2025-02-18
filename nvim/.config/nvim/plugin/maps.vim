@@ -6,6 +6,19 @@ vnoremap <silent> <leader>pv  "_dP
 vnoremap <silent> <C-j>       :move '>+1<CR>gv=gv
 vnoremap <silent> <C-k>       :move '<-2<CR>gv=gv
  noremap <silent> <leader>sh  :FSHere<CR>
+function! SplitLineNicely()
+    " Save previous value of last search register
+    let saved_last_search_pattern = @/
+
+    " :substitute replaces the content of the search register with the `\s\+`
+    " pattern highlighting all whitespaces in the file
+    substitute /\s\+/\r/g
+
+    " Restore previous search register
+    let @/ = saved_last_search_pattern
+endfunction
+ noremap <silent> <leader>ss  :call SplitLineNicely()<CR>
+ noremap <silent> <leader>sj  :%j \| wq<CR>
 
 " Window stuff
  noremap <silent> <leader>oe  :TroubleToggle<CR>
