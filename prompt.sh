@@ -28,10 +28,10 @@ __my_prompt() {
     fi
   }
 
-  right_side="\
+  local right_side="\
 $GREEN_FG$right_sep$BLACK_FG$GREEN_BG ${debian_chroot:+($debian_chroot)}\u@\h $GREEN_BG\
 $BLUE_FG$right_sep$BLACK_FG$BLUE_BG \d \A $RESET"
-  right_side_non_printable_count=48
+  local right_side_non_printable_count=48
 
   PS1="\
 $(tput sc; printf "%*s" $(($(tput cols) + right_side_non_printable_count)) "$right_side"; tput rc)\
